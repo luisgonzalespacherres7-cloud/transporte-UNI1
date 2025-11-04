@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto UNI</title>
+   <link rel="stylesheet" href="../css/estilo.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: url('../imgs/bus uni.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .menu-uni {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.menu-uni ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.menu-uni a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.menu-uni a:hover {
+  color: #e9c535; 
+}
+.encabezado-uni {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(8, 159, 205, 0.8); /* sombra celeste */
+
+  background-color: rgba(161, 37, 3, 0.4);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.logo-uni {
+  height: 60px;
+}
+
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .frase-bus {
+      color: #e9c535;
+      font-size: 30px;
+      margin-top: 550px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      max-width: 800px;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #f9f5f5;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    
+  </style>
+</head>
+<body>
+
+ <div class="encabezado-uni">
+  <img src="../imgs/logouni.jpg" alt="Logo UNI" class="logo-uni">
+  <span>UNI - Área de Transporte</span>
+</div>
+
+<nav class="menu-uni">
+      <ul>
+        <li><a href="rutas.html">Rutas Diarias</a></li>
+        <li><a href="visitas.html">Visitas Tecnicas</a></li>
+        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      </ul>
+  
+</nav>
+
+  <main>
+    <div class="frase-bus">RESPONSABILIDAD Y PROFESIONALISMO TRANSPORTANDO EL FUTURO DEL PAÍS.</div>
+  </main>
+
+<footer style="display: flex; align-items: center; justify-content: space-between; background-color: rgba(0, 0, 0, 0.8); color: #f9f5f5; padding: 15px; font-size: 14px;">
+  
+
+  <div>
+    <img src="../imgs/logouni.jpg" alt="Logo UNI" style="width:60px; height:auto;">
+  </div>
+
+  
+  <div style="text-align: right;">
+    <img src="../imgs/whatsaap.jpg" alt="WhatsApp" style="width:20px; vertical-align:middle; margin-right:8px;">
+    <a href="https://wa.me/" style="color:#cea80c; text-decoration:none;"></a>
+    <br><br>
+   <div style="width: 100%; text-align: center; margin-top: 10px;">
+  © 2025 UNI - Área de Transporte. Luis Gonzales Pacherres. Todos los derechos reservados.
+</div>
+  </div>
+
+</footer>
+
+</body>
+</html
