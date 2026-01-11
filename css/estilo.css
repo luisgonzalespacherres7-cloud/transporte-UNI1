@@ -1,0 +1,256 @@
+:root {
+  --rojo-uni: #7a0b0b;
+  --rojo-uni-2: #5f0a0a;
+  --dorado: #ffd24a;
+  --blanco: #ffffff;
+}
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: Arial, sans-serif; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../imgs/bus uni.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+header.site-header {
+  background: linear-gradient(180deg, var(--rojo-uni), var(--rojo-uni-2));
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-inner {
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.brand img {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.brand .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-image: linear-gradient(90deg,
+      #8d6b20 0%,
+      #caa64d 20%,
+      #ffd24a 35%,
+      #ffe07a 50%,
+      #caa64d 65%,
+      #8d6b20 80%,
+      #6a4f16 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 7s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+
+nav.main-nav {
+  margin-left: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+.nav-list a {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: color .3s ease, transform .2s ease;
+}
+.nav-list a:hover {
+  color: var(--dorado);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  nav.main-nav {
+    margin-left: 0;
+  }
+  .nav-list {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .brand .title {
+    font-size: 1.3rem;
+  }
+}
+
+
+.reloj-container {
+  display: flex;
+  justify-content: 0;
+  margin-top: -550px;
+}
+
+
+#reloj {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  background: var(--rojo-uni);
+  padding: 8px 20px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.frase-impacto {
+  text-align: right;
+  margin: -600px 40px 0 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFA500;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.frase-bus {
+  color: #e9c535;
+  font-size: 30px;
+  margin-top: 550px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f9f5f5;
+  text-align: center;
+  padding: 4px 10px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+footer img {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  color: #FFD700;
+  text-shadow: 0 0 5px #fff200, 0 0 10px #ffcc00;
+  cursor: pointer;
+}
+
+.menu-uni ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.menu-uni li a {
+  text-decoration: none;
+  font-size: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+.menu-uni li a:hover {
+  color: #FFD700;
+}
+
+@media (max-width: 1024px) {
+  .contenido {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .contenido img,
+  .imagenes-dobles img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .texto {
+    max-width: 100%;
+    font-size: 1.1em;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenido {
+    padding: 20px 10px;
+  }
+
+  .contenido img,
+  .imagenes-dobles img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .brand .title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  nav.main-nav a {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 0.85em;
+    padding: 15px;
+  }
+}

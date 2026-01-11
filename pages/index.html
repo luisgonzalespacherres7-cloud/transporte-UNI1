@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto UNI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+
+  
+  <header class="site-header" role="banner">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="../imgs/logouni.jpg" alt="Logo UNI Transporte" />
+      <div class="title">UNI - Área de Transporte</div>
+    </div> 
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="rutasdiarias.html">Rutas Diarias</a></li>
+        <li><a href="visitastecnicas.html">Visitas Técnicas</a></li>
+        <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="reloj-container"> <div id="reloj">08:29</div> </div>
+ 
+  <div class="frase-impacto">
+    RESPONSABILIDAD Y PROFESIONALISMO TRANSPORTANDO EL FUTURO DEL PAÍS.
+  </div>
+
+  
+  <footer>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      
+      <div style="text-align: right;">
+        <img src="../imgs/whatsaap.jpg" alt="WhatsApp" style="width:20px; vertical-align:middle; margin-right:8px;">
+        <a href="https://wa.me/" style="color:#cea80c; text-decoration:none;"></a>
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center; margin-top: 10px;">
+      © 2026 UNI - Área de Transporte. Luis Gonzales Pacherres. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+function actualizarReloj() {
+  const ahora = new Date();
+  const opciones = { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' };
+  const formato = ahora.toLocaleString('es-PE', opciones);
+  document.getElementById('reloj').textContent = formato;
+}
+setInterval(actualizarReloj, 1000);
+actualizarReloj();
+</script>
+
+
+
+</body>
+</html>
